@@ -1,0 +1,39 @@
+<idea-plugin>
+    <id>com.ashlikun.findview</id>
+    <name>findViewById</name>
+    <version>1.0</version>
+    <vendor email="496546144@qq.com" url="https://github.com/ashLikun/findview">likun</vendor>
+
+    <description><![CDATA[
+      一键生成findViewById
+    ]]></description>
+
+    <change-notes><![CDATA[
+    一键生成findViewById
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0" />
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="GenerateFindViewByIdAction" class="actions.FindViewByIdAction"
+            text="FindViewById" description="GenerateFindViewByIdAction">
+            <add-to-group group-id="CodeMenu" anchor="first" />
+            <add-to-group group-id="GenerateGroup" anchor="first" />
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt E" />
+        </action>
+    </actions>
+
+</idea-plugin>
